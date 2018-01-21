@@ -3,7 +3,7 @@ body{
   justify-content:center;
   align-items:center;
   background-color:#60A100;
-  margin:0auto;
+  margin:0 auto;
 }
 canvas{
   border:black 5px solid;
