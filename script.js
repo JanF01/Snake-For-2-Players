@@ -135,12 +135,14 @@ class Snake{
   }
   colision(x){
     if(this.X==canvasw || this.X<0 || this.Y<0 || this.Y==canvash){
-      this.won();
+       fps=5000;
+      setTimeout(function(){fps=40;this.won();},1500);
       return true;
     }
     for(let i=1;i<x.length;i++){
       if(this.X==x[i][0] && this.Y==x[i][1]){
-      this.won();
+        fps=5000;
+      setTimeout(function(){fps=40;this.won();},1500);
         return true;
       }
     }
@@ -148,7 +150,8 @@ class Snake{
     if(this.body.length>3){
     for(let i=2;i<this.body.length;i++){
       if(this.X==this.body[i][0] && this.Y==this.body[i][1]){
-        this.won();
+          fps=5000;
+      setTimeout(function(){fps=40;this.won();},1500);
         return true;
       }
     }
@@ -382,7 +385,7 @@ function game(){
 draw();
 }
 
-
+var fps = 40;
 pick();
 var interv;
 function start(x){
@@ -390,6 +393,6 @@ function start(x){
    clearInterval(interv);
   }
   else{
-   interv = setInterval(game,1000/40);
+   interv = setInterval(game,1000/fps);
   }
 }
