@@ -136,14 +136,12 @@ class Snake{
   colision(x){
     if(this.X==canvasw || this.X<0 || this.Y<0 || this.Y==canvash){
        fps=5000;
-      setTimeout(function(){fps=40;this.won();},1500);
-      return true;
+      setTimeout(function(){fps=40;this.won();  return true;},1500);
     }
     for(let i=1;i<x.length;i++){
       if(this.X==x[i][0] && this.Y==x[i][1]){
         fps=5000;
-      setTimeout(function(){fps=40;this.won();},1500);
-        return true;
+      setTimeout(function(){fps=40;this.won();return true;},1500);
       }
     }
 
@@ -151,8 +149,8 @@ class Snake{
     for(let i=2;i<this.body.length;i++){
       if(this.X==this.body[i][0] && this.Y==this.body[i][1]){
           fps=5000;
-      setTimeout(function(){fps=40;this.won();},1500);
-        return true;
+      setTimeout(function(){fps=40;this.won();return true;},1500);
+
       }
     }
     }
