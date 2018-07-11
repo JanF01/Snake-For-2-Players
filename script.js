@@ -182,7 +182,7 @@ class Snake{
     ctx.fillStyle = 'black';
     ctx.fillRect(0,0,canvasw,canvash);
     ctx.fillStyle = 'white';
-    ctx.font = '35px monospace';
+    ctx.font = '30px monospace';
     if(this.color=="black"){ctx.font = '33px monospace'; ctx.fillText('Gratulacje, Fioletowy Graczu',10,100);}
     else if(this.color=='#900050'){ctx.fillText('Gratulacje, Czarny Graczu', 10, 100);}
 
